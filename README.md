@@ -19,16 +19,6 @@ Um site **maximalista retro** que combina personagens de *Steven Universe* e *Po
 - **Filtros por Tipo** (em desenvolvimento)
 - **100% Customizável**
 
-## 🎨 Paleta de Cores
-
-| Cor               | Hexadecimal                                                |
-|-------------------|-----------------------------------------------------------|
-| Rosa Neon         | ![#FF00FF](https://via.placeholder.com/10/FF00FF?text=+) `#FF00FF` |
-| Ciano             | ![#00FFFF](https://via.placeholder.com/10/00FFFF?text=+) `#00FFFF` |
-| Amarelo Destaque  | ![#FFFF00](https://via.placeholder.com/10/FFFF00?text=+) `#FFFF00` |
-| Fundo Claro       | ![#FFC0CB](https://via.placeholder.com/10/FFC0CB?text=+) `#FFC0CB` |
-| Fundo Escuro      | ![#1A1A2E](https://via.placeholder.com/10/1A1A2E?text=+) `#1A1A2E` |
-
 ## 🛠️ Tecnologias Usadas
 
 - **HTML5** - Estrutura semântica
