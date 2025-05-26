@@ -8,7 +8,7 @@
 
 Um site **maximalista retro** que combina personagens de *Steven Universe* e *Pokémon* com design vintage e interações modernas!
 
-🔗 **Acesse online**: [https://seu-usuario.github.io/galaxia-personagens](https://seu-usuario.github.io/galaxia-personagens)
+🔗 **Acesse online**: [https://matheusabib.github.io/Diario-de-personagens/]
 
 ## 🚀 Funcionalidades
 
