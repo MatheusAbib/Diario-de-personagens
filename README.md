@@ -7,16 +7,10 @@
 
 Um site **maximalista retro** que combina personagens de *Steven Universe* e *Pokémon* com design vintage e interações modernas!
 
-## ✨ Demonstração
-
-![Preview do Site](https://i.imgur.com/JQJbL1a.jpg)  
-*(Captura de tela do projeto em ação)*
-
 🔗 **Acesse online**: [https://seu-usuario.github.io/galaxia-personagens](https://seu-usuario.github.io/galaxia-personagens)
 
 ## 🚀 Funcionalidades
 
-- **Modo Claro/Escuro** com troca dinâmica de tema
 - **Design Responsivo** para todos os dispositivos
 - **Efeitos Visuais**:
   - Confetes ao alterar tema
@@ -44,5 +38,3 @@ Um site **maximalista retro** que combina personagens de *Steven Universe* e *Po
   - Animações keyframes
 - **JavaScript** - Interatividade
 - **Google Fonts** - Tipografia retro
-
-## 📂 Estrutura de Arquivos
