@@ -1,0 +1,439 @@
+
+        :root {
+            --cor-primaria: #FF00FF;
+            --cor-secundaria: #00FFFF;
+            --cor-destaque: #FFFF00;
+            --cor-texto: #000;
+            --cor-fundo: #FFC0CB;
+            --cor-principal: #92e9cc;
+
+            --cor-fundo-escuro: #1A1A2E;
+            --cor-texto-escuro: #E6E6FA;
+            --cor-neon: #39FF14;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: all 0.3s ease;
+        }
+
+        /* Barra de rolagem personalizada */
+        *::-webkit-scrollbar {
+            width: 16px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: var(--cor-fundo);
+            border-left: 2px solid var(--cor-primaria);
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: var(--cor-primaria);
+            border-radius: 0;
+            border: 3px solid var(--cor-destaque);
+            box-shadow: inset 0 0 10px #000;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: url('https://www.transparenttextures.com/patterns/retina-wood.png') fixed;
+            color: var(--cor-texto);
+            border-left: 8px solid var(--cor-primaria);
+            border-right: 8px solid var(--cor-secundaria);
+            position: relative;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+                        background: url('https://www.transparenttextures.com/patterns/retina-wood.png') fixed;
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Modo escuro */
+        body.modo-escuro {
+            background-color: var(--cor-fundo-escuro);
+            color: var(--cor-texto-escuro);
+            border-left: 8px solid var(--cor-neon);
+            border-right: 8px solid #FF10F0;
+        }
+
+        body.modo-escuro::before {
+            opacity: 0.05;
+        }
+
+        /* Cabeçalho */
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+            color: #fff;
+            align-items: center;
+            border-bottom: 6px dashed var(--cor-destaque);
+            position: relative;
+            z-index: 10;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: repeating-linear-gradient(45deg, var(--cor-primaria), var(--cor-primaria) 10px, var(--cor-secundaria) 10px, var(--cor-secundaria) 20px);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid var(--cor-destaque);
+            box-shadow: 0 0 15px var(--cor-destaque), inset 0 0 10px #000;
+            padding: 2px;
+            background: white;
+            transition: all 0.5s ease;
+        }
+
+        header .logo:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .titulo-site {
+            font-family: 'Rubik Mono One', sans-serif;
+            font-size: 1.7rem;
+            text-shadow: 1px 2px 0 var(--cor-destaque), 5px 5px 0 #00000031;
+            letter-spacing: 1px;
+            margin-left: 5px;
+            color: rgba(0, 0, 0, 0.068);
+        }
+
+        .imagem-botao {
+            width: 40px;
+            filter: drop-shadow(0 0 5px gold);
+            transition: all 0.3s ease;
+        }
+
+        #botao-alterar-tema {
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        #botao-alterar-tema:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* Conteúdo principal */
+        main {
+            padding: 30px;
+            position: relative;
+        }
+
+        main::before {
+            content: "★ ☆ ★ ☆ ★ ☆ ★ ☆ ★ ☆ ★ ☆ ★ ☆ ★ ☆ ★ ☆ ★ ☆ ★";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: var(--cor-primaria);
+            font-size: 1.5rem;
+            letter-spacing: 5px;
+            opacity: 0.5;
+        }
+
+        .subtitulo {
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.5rem;
+            color: var(--cor-primaria);
+            text-shadow: 2px 2px 0 #000;
+            position: relative;
+        }
+
+        .subtitulo::before, .subtitulo::after {
+            content: "✧";
+            margin: 0 15px;
+        }
+
+        body.modo-escuro .subtitulo {
+            color: var(--cor-neon);
+            text-shadow: 2px 2px 0 #000, 0 0 10px var(--cor-neon);
+        }
+
+        /* Listagem de personagens */
+        .listagem-pokemon {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        /* Cartões de personagens */
+        .cartao-pokemon {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            border-radius: 10px;
+            border: 4px solid var(--cor-primaria);
+            box-shadow: 5px 5px 0 var(--cor-secundaria), 10px 10px 0 rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .cartao-pokemon::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .cartao-pokemon:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 8px 8px 0 var(--cor-secundaria), 15px 15px 0 rgba(0,0,0,0.2), 0 0 20px var(--cor-destaque);
+        }
+
+        .cartao-pokemon .informacoes {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+            color: white;
+            border-radius: 5px;
+            font-family: 'VT323', monospace;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            border: 2px solid black;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 2;
+        }
+
+        .cartao-pokemon .informacoes span:first-child {
+            font-weight: bold;
+            text-shadow: 2px 2px 0 #000;
+        }
+
+        .cartao-pokemon .informacoes span:last-child {
+            background-color: black;
+            padding: 0 10px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .cartao-pokemon .gif {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            image-rendering: pixelated;
+            filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+            z-index: 2;
+        }
+
+        .cartao-pokemon .tipos {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .cartao-pokemon .tipo {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: 'DotGothic16', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid black;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+            color: white;
+            text-shadow: 1px 1px 0 #000;
+        }
+
+        .cartao-pokemon .descricao {
+            max-height: 100px;
+            overflow-y: scroll;
+            font-size: 0.9rem;
+            padding: 10px;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 5px;
+            border: 1px dashed var(--cor-primaria);
+            font-family: 'Comic Neue', cursive;
+            z-index: 2;
+        }
+
+        /* Cores dos tipos */
+        .grama { background-color: #7ac74c; }
+        .planta { background-color: #6B8E23; }
+        .cura { background-color: #EE82EE; }
+        .telecinese { background-color: #6959CD; }
+        .fusao { background-color: #FF6347; }
+        .protecao { background-color: #FA8072; }
+        .servente { background-color: #D8BFD8; }
+        .ataque { background-color: #6959CD; }
+        .animal { background-color: #FFE4C4; color: #000; text-shadow: none; }
+        .soldado { background-color: #008B8B; }
+        .quartzo { background-color: #DAA520; }
+        .veneno { background-color: #FF0000; }
+        .fogo { background-color: #ee8130; }
+        .agua { background-color: #6390f0; }
+        .eletrico { background-color: #FFD700; color: #000; text-shadow: none; }
+
+        /* Modo escuro */
+        .modo-escuro .cartao-pokemon {
+            background-color: #2A2A3A;
+            border-color: var(--cor-neon);
+            box-shadow: 5px 5px 0 #FF10F0, 10px 10px 0 rgba(0,0,0,0.5);
+        }
+
+        .modo-escuro .cartao-pokemon:hover {
+            box-shadow: 8px 8px 0 #FF10F0, 15px 15px 0 rgba(0,0,0,0.5), 0 0 20px var(--cor-neon);
+        }
+
+        .modo-escuro .cartao-pokemon .informacoes {
+            background: linear-gradient(90deg, var(--cor-neon), #FF10F0);
+            color: #000;
+            border-color: #fff;
+        }
+
+        .modo-escuro .cartao-pokemon .descricao {
+            background-color: rgba(0,0,0,0.5);
+            color: #fff;
+            border-color: var(--cor-neon);
+        }
+
+        /* Efeitos especiais */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: var(--cor-destaque);
+            opacity: 0;
+            z-index: 100;
+            animation: confetti-fall 5s linear forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .titulo-site {
+                font-size: 1.3rem;
+                text-align: center;
+            }
+            
+            .listagem-pokemon {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-site {
+                font-size: 1.3rem;
+            }
+            
+            .subtitulo {
+                font-size: 1rem;
+            }
+            
+            .cartao-pokemon {
+                padding: 15px;
+            }
+            
+            .cartao-pokemon .informacoes {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Botão de voltar ao topo */
+        .botao-topo {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--cor-primaria);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .botao-topo.visivel {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .botao-topo:hover {
+            background-color: var(--cor-destaque);
+            transform: scale(1.1);
+        }
+
+        .modo-escuro .botao-topo {
+            background-color: var(--cor-neon);
+            color: #000;
+        }
