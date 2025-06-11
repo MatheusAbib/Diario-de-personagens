@@ -1,5 +1,5 @@
 
-# 🌟 Diário de Personagens - Steven Universe & Pokémon 🌟
+# 🌟 Diário de Personagens - Steven Universe & Pokémon
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/seu-usuario/seu-repositorio/blob/main/LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
